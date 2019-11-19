@@ -46,5 +46,6 @@ if(n.F>1){
 cat(paste("3",paste(Faces[n.F,],collapse=" "),sep=" ") )
 sink()
 
-return( print(paste("File successfully written to: ", filename, sep="")) )
+#Added extra output for quality control
+return( print(paste("File successfully written to: ", filename, ", with this many vertex: ", n.V, " and faces: ", n.F, sep="")) )
 }

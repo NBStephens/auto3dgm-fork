@@ -158,10 +158,15 @@ theta = pi/2
 rotation_matrix = matrix(c(cos(theta), -sin(theta), 0, sin(theta), cos(theta), 0, 0, 0, 1), nrow=3, byrow=T)
 rotation_matrix = rotation_matrix%*%matrix(c(0,0,1,0,-1,0,1,0,0), nrow=3, byrow=T)%*%t(ds$shape[[1]]$U_X[[k]])
 
+
 #This will write the aligned files
 unlink(paste(ds$msc$output_dir, "/", "Aligned_Shapes", sep=""), recursive=TRUE)
 dir.create(paste(ds$msc$output_dir, "/", "Aligned_Shapes", sep=""))
 write_aligned_files(ds, ga, ds$msc$mesh_dir, paste(ds$msc$output_dir, "/", "Aligned_Shapes", sep=""), FALSE )
+
+#Write the rotation matrix to a csv txt file
+r_matrix <- as.data.frame(rotation_matrix)
+write.table(r_matrix, file = paste(ds$msc$output_dir, "/rotation_matrix.txt", sep=""), sep = ",")
 
 #create the variable argument for write_off_global_alignment
 varargin = list(1:ds$n, 10, rotation_matrix,3.0, 1 )
