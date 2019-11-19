@@ -1,3 +1,18 @@
+Code forked from Julia Winchester (https://github.com/JuliaWinchester/auto3dgm-fork).
+
+Code has been changed to:
+
+Write out the transormation matrix and origin into the './Results/Aligned_Shapes' folder. 
+
+Code has been used in:
+
+Exploring age-related variations during talar growth (2019) https://meeting.physanth.org/program/2019/session51/gabanini-2019-exploring-age-related-variations-during-calcaneal-growth.html
+
+Trabecular bone patterning across the human hand (2018) JHE, 123 1-23 https://doi.org/10.1016/j.jhevol.2018.05.004
+
+Signals of loading and function in the human hand: a multi-method analysis of the external cortical and internal trabecular bone of the metacarpals.
+
+
 ################################################################################
 #
 # auto3dgm-fork
